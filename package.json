@@ -1,0 +1,48 @@
+{
+  "name": "vdom-crud-li",
+  "description": "Editable list item",
+  "main": "CrudListItem.js",
+  "version": "0.0.0",
+  "keywords": [
+    "virtual-dom",
+    "mercury",
+    "ui",
+    "component",
+    "list item"
+  ],
+  "browserify": {
+    "transform": []
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -d example/example.js > example/bundle.js",
+    "watch": "watchify example/example.js -o example/bundle.js -dv",
+    "dev": "npm run watch & npm run server",
+    "postversion": "git push && git push --tags",
+    "prepublish": "npm run build-style",
+    "build-style": "node-sass style.scss > example/style.css",
+    "server": "node server.js",
+    "demo": "browserify example/example.js > example/bundle.js && html-inline example/index.html | curl -sT- https://htmlb.in"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nichoth/vdom-crud-li.git"
+  },
+  "license": "ISC",
+  "peerDependencies": {},
+  "devDependencies": {
+    "ecstatic": "^1.4.0",
+    "main-loop": "^3.2.0",
+    "node-sass": "^3.4.2"
+  },
+  "dependencies": {
+    "@nichoth/state": "0.0.2",
+    "observ": "^0.2.0",
+    "vdom-buttons": "0.0.3",
+    "vdom-form-field": "0.0.7",
+    "vdom-input": "0.0.9",
+    "virtual-dom": "^2.1.1",
+    "xtend": "^4.0.1"
+  }
+}

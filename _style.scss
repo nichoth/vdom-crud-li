@@ -1,0 +1,10 @@
+.vdom-crud-li {
+  .vdom-form-field {
+    display: inline-block;
+  }
+  .vdom-button {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
