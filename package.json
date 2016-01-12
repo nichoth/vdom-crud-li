@@ -2,7 +2,7 @@
   "name": "vdom-crud-li",
   "description": "Editable list item",
   "main": "CrudListItem.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [
     "virtual-dom",
     "mercury",
