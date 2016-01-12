@@ -41,7 +41,7 @@ function CrudListItem(opts) {
   function delFn(isEditing) {
     if (isEditing) {
       s.isEditing.set(false);
-      Input.set(s.input, s.value);
+      Input.set(s.input, s.value());
       return;
     }
     opts.deleteFn();
