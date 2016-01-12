@@ -2,13 +2,17 @@ var vdom = require('virtual-dom');
 var h = vdom.h;
 var Item = require('../CrudListItem.js');
 
-var data = [
-  {name: 'item 1'},
-  {name: 'item 2'}
-];
+
+var TextNode = require('../TextNode.js');
+var Input = require('../Input.js');
+var item = Item({
+  textNode: TextNode({ value: 'item 1' }),
+  input: Input({ value: 'item 1' })
+});
+
 
 var state = Item({
-  value: data[0].name,
+  value: 'item 1'
   textNodeFn: function(val) {
     return h('a', { href: '/' }, [val]);
   },

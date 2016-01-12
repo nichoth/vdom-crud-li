@@ -41,7 +41,7 @@
     "observ": "^0.2.0",
     "vdom-buttons": "0.0.3",
     "vdom-form-field": "0.0.7",
-    "vdom-input": "0.0.9",
+    "vdom-input": "0.0.10",
     "virtual-dom": "^2.1.1",
     "xtend": "^4.0.1"
   }

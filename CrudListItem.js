@@ -12,7 +12,9 @@ module.exports = CrudListItem;
 function CrudListItem(opts) {
   opts = opts || {};
   opts.deleteFn = opts.deleteFn || noop;
-  opts.saveFn = opts.saveFn || noop;
+  opts.saveFn = opts.saveFn || function(val, done) {
+    done();
+  };
   opts.textNodeFn = opts.textNodeFn || function(val) { return val; };
 
   var defaultStyle = {
@@ -37,7 +39,11 @@ function CrudListItem(opts) {
   });
 
   function delFn(isEditing) {
-    if (isEditing) return s.isEditing.set(false);
+    if (isEditing) {
+      s.isEditing.set(false);
+      Input.set(s.input, s.value);
+      return;
+    }
     opts.deleteFn();
   }
 
