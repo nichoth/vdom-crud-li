@@ -12,7 +12,7 @@ var item = Item({
 
 
 var state = Item({
-  value: 'item 1'
+  value: 'item 1',
   textNodeFn: function(val) {
     return h('a', { href: '/' }, [val]);
   },

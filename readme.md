@@ -2,6 +2,8 @@
 
 Editable list item for virtual doms.
 
+[demo](http://hallowed-letters.surge.sh/vdom-crud-li)
+
 
 ## install
 
